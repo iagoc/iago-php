@@ -37,7 +37,7 @@ for ($i = 0; $i < count($idadeList); $i++){
 $contasCorrentes = [
     '123.456.789-10' => [
         'titular' => 'Maria',
-        'saldo' => 10000
+        'saldo' => 1000
     ],
     '123.456.689-11' => [
         'titular' => 'Alberto',
