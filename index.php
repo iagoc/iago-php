@@ -1,5 +1,6 @@
 <?php
-require_once 'funcoes.php';
+require_once 'src/Conta.php';
+require_once 'src/Cliente.php';
 
 
 //$contador = 1;
@@ -27,47 +28,63 @@ require_once 'funcoes.php';
 
 //Listas de dados
 
-$idadeList = array(21, 22, 24, 29);
+//$idadeList = array(21, 22, 24, 29);
+//
+//for ($i = 0; $i < count($idadeList); $i++){
+//    echo $idadeList[$i];
+//}
+//
+////Arrays associativos
+//$contasCorrentes = [
+//    '123.456.789-10' => [
+//        'titular' => 'Maria',
+//        'saldo' => 1000000000
+//    ],
+//    '123.456.689-11' => [
+//        'titular' => 'Alberto',
+//        'saldo' => 300
+//    ],
+//    '123.256.789-12' => [
+//        'titular' => 'Vinicius',
+//        'saldo' => 100
+//    ]
+//];
+//
+//foreach ($contasCorrentes as $cpf => $conta) {
+//    ['titular' => $titular, 'saldo' => $saldo] = $conta; //utlizando list
+//    exibeMensagem(
+//        "$cpf $titular $saldo"
+//    );
+//}
+//
+//$contasCorrentes['123.456.789-10'] = sacar(
+//    $contasCorrentes['123.456.789-10'],
+//    500
+//);
+//
+//$contasCorrentes['123.456.689-11'] = sacar(
+//    $contasCorrentes['123.456.689-11'],
+//    200
+//);
+//
+//$contasCorrentes['123.256.789-12'] = depositar(
+//    $contasCorrentes['123.256.789-12'],
+//    900
+//);
 
-for ($i = 0; $i < count($idadeList); $i++){
-    echo $idadeList[$i];
-}
 
-//Arrays associativos
-$contasCorrentes = [
-    '123.456.789-10' => [
-        'titular' => 'Maria',
-        'saldo' => 1000000000
-    ],
-    '123.456.689-11' => [
-        'titular' => 'Alberto',
-        'saldo' => 300
-    ],
-    '123.256.789-12' => [
-        'titular' => 'Vinicius',
-        'saldo' => 100
-    ]
-];
+$primeiraConta = new Conta(1213123132, 'Iago');
+var_dump($primeiraConta);
 
-foreach ($contasCorrentes as $cpf => $conta) {
-    ['titular' => $titular, 'saldo' => $saldo] = $conta; //utlizando list
-    exibeMensagem(
-        "$cpf $titular $saldo"
-    );
-}
 
-$contasCorrentes['123.456.789-10'] = sacar(
-    $contasCorrentes['123.456.789-10'],
-    500
-);
+//$primeiraConta->saldo = 1000;
+//$primeiraConta->cpf = '170.172.737.45';
+//$primeiraConta->nome = 'Iago Carvalho';
 
-$contasCorrentes['123.456.689-11'] = sacar(
-    $contasCorrentes['123.456.689-11'],
-    200
-);
-
-$contasCorrentes['123.256.789-12'] = depositar(
-    $contasCorrentes['123.256.789-12'],
-    900
-);
-
+//var_dump($primeiraConta);
+//
+//$primeiraConta->sacar(100);
+//var_dump($primeiraConta);
+//
+//$primeiraConta->depositar(300);
+//var_dump($primeiraConta);
